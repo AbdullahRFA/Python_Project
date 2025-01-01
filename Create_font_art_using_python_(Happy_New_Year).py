@@ -1,7 +1,7 @@
 from colorama import Fore, Style
 import pyfiglet
-
-def display_ascii_art(message, color):
+import time
+def display_ascii_art(message, color, delay=0.5):
     """
     Function to render and display ASCII art in a specified color.
 
@@ -10,12 +10,19 @@ def display_ascii_art(message, color):
         color (str): The color to apply from Colorama's `Fore` module.
     """
     ascii_art = pyfiglet.figlet_format(message)
-    print(color+ascii_art+Style.RESET_ALL)
-
+    for lines in ascii_art.splitlines():
+        print(color + lines + Style.RESET_ALL)
+        time.sleep(delay)
+    
 def main():
-     display_ascii_art("Happy New Year", Fore.GREEN)
-     display_ascii_art("Wish You All The Best", Fore.YELLOW)
-     display_ascii_art("Celebrate With Joy!", Fore.CYAN)
+    print(f"{Fore.RED}Starting The Celebration...")
+    time.sleep(1)
+    display_ascii_art("Happy New Year", Fore.GREEN , delay=0.2)
+    time.sleep(1)
+    display_ascii_art("Wish You All The Best", Fore.YELLOW, delay=0.2)
+    time.sleep(1)
+    display_ascii_art("Celebrate With Joy!", Fore.CYAN, delay=0.1)
+    time.sleep(1)
      
 if __name__ == "__main__":
     main()
