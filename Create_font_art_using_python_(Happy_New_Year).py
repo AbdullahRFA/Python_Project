@@ -17,7 +17,7 @@ def display_ascii_art(message, color, delay=0.5):
 def main():
     print(f"{Fore.RED}Starting The Celebration...")
     time.sleep(1)
-    display_ascii_art("Happy New Year", Fore.GREEN , delay=0.2)
+    display_ascii_art("Happy New Year 2025", Fore.GREEN , delay=0.2)
     time.sleep(1)
     display_ascii_art("Wish You All The Best", Fore.YELLOW, delay=0.2)
     time.sleep(1)
