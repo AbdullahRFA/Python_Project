@@ -1,3 +1,6 @@
+# pip install colorama
+# pip install pyfiglet
+
 from colorama import Fore, Style
 import pyfiglet
 import time
